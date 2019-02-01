@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 
 import SmurfList from "../components/SmurfList";
 
+import "./SmurfsView.css";
+
 class SmurfsView extends Component {
   componentDidMount() {
     this.props.fetchSmurfs();
@@ -29,7 +31,7 @@ class SmurfsView extends Component {
           />
         )}
         <Link to="/smurf-form">
-          <button>Add Smurf</button>
+          <button className="add-smurf-btn">Add Smurf</button>
         </Link>
       </div>
     );
