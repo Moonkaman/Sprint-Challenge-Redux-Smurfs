@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import SmurfsView from '../views/SmurfsView';
+import SmurfFormView from '../views/SmurfFormView';
 
 import './App.css';
 /*
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <Route exact path='/' component={SmurfsView} />
+        <Route path='/smurf-form' component={SmurfFormView} />
       </div>
     );
   }

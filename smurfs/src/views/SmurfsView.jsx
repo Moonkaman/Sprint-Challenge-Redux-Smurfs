@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
 import Loader from "react-loader-spinner";
+import { Link } from "react-router-dom";
 
 import SmurfList from "../components/SmurfList";
 
@@ -19,6 +20,9 @@ class SmurfsView extends Component {
         ) : (
           <SmurfList smurfs={this.props.smurfs} />
         )}
+        <Link to="/smurf-form">
+          <button>Add Smurf</button>
+        </Link>
       </div>
     );
   }
