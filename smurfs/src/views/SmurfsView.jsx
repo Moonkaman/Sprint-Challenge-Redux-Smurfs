@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
 
+import SmurfList from "../components/SmurfList";
+
 class SmurfsView extends Component {
   componentDidMount() {
     this.props.fetchSmurfs();
@@ -10,7 +12,7 @@ class SmurfsView extends Component {
   render() {
     return (
       <div>
-        <h1>Smurfs</h1>
+        <SmurfList smurfs={this.props.smurfs} />
       </div>
     );
   }
