@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 import SmurfsView from '../views/SmurfsView';
 
@@ -13,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfsView />
+        <Route exact path='/' component={SmurfsView} />
       </div>
     );
   }

@@ -12,6 +12,7 @@ class SmurfsView extends Component {
   render() {
     return (
       <div>
+        <h1>Smurfs in Village</h1>
         <SmurfList smurfs={this.props.smurfs} />
       </div>
     );
