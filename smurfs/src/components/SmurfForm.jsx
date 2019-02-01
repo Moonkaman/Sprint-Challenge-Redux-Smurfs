@@ -2,7 +2,7 @@ import React from "react";
 
 const SmurfForm = props => {
   return (
-    <form>
+    <form onSubmit={props.addSmurf}>
       <input
         type="text"
         placeholder="Name..."
