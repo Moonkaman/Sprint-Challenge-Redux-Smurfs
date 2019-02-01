@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../actions";
+import Loader from "react-loader-spinner";
 
 import SmurfList from "../components/SmurfList";
 
@@ -13,7 +14,11 @@ class SmurfsView extends Component {
     return (
       <div>
         <h1>Smurfs in Village</h1>
-        <SmurfList smurfs={this.props.smurfs} />
+        {this.props.isFetchingSmurfs ? (
+          <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
+        ) : (
+          <SmurfList smurfs={this.props.smurfs} />
+        )}
       </div>
     );
   }
@@ -21,7 +26,8 @@ class SmurfsView extends Component {
 
 const mapStateToProps = state => {
   return {
-    smurfs: state.smurfs
+    smurfs: state.smurfs,
+    isFetchingSmurfs: state.isFetchingSmurfs
   };
 };
 
