@@ -1,0 +1,53 @@
+.smurf-cont {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 20px 0 0 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.smurf-cont h2 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.smurf-cont p {
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.smurf-cont button {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  border-top: 1px dashed lightgray;
+  background: tomato;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.smurf-cont button:hover {
+  background: rgb(228, 86, 61);
+}
+
+.add-smurf-btn {
+  padding: 10px 65px;
+  border: none;
+  background: none;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.add-smurf-btn:hover {
+  background: #2980b9;
+}
