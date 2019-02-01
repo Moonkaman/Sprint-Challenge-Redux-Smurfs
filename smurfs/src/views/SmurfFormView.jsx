@@ -5,6 +5,8 @@ import { addSmurf } from "../actions";
 
 import SmurfForm from "../components/SmurfForm";
 
+import "./SmurfFormView.css";
+
 class SmurfFormView extends Component {
   state = {
     smurf: {
