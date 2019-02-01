@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchSmurfs } from "../actions";
+import { fetchSmurfs, deleteSmurf } from "../actions";
 import Loader from "react-loader-spinner";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,11 @@ class SmurfsView extends Component {
     this.props.fetchSmurfs();
   }
 
+  deleteSmurf = (e, id) => {
+    e.preventDefault();
+    this.props.deleteSmurf(id);
+  };
+
   render() {
     return (
       <div>
@@ -18,7 +23,10 @@ class SmurfsView extends Component {
         {this.props.isFetchingSmurfs ? (
           <Loader type="ThreeDots" color="#00BFFF" height="100" width="100" />
         ) : (
-          <SmurfList smurfs={this.props.smurfs} />
+          <SmurfList
+            smurfs={this.props.smurfs}
+            deleteSmurf={this.deleteSmurf}
+          />
         )}
         <Link to="/smurf-form">
           <button>Add Smurf</button>
@@ -37,5 +45,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { fetchSmurfs }
+  { fetchSmurfs, deleteSmurf }
 )(SmurfsView);
